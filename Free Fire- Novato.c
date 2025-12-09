@@ -19,13 +19,13 @@ typedef struct {
 // -----------------------------------------------------------
 void inserirItem(Item mochila[], int *total) {
     if (*total >= MAX_ITENS) {
-        printf("\n⚠️ A mochila está cheia! Não é possível adicionar mais itens.\n");
+        printf("\n A mochila está cheia! Não é possível adicionar mais itens.\n");
         return;
     }
 
     Item novo;
 
-    printf("\nDigite o nome do item: ");
+    printf("\n Digite o nome do item: ");
     scanf("%s", novo.nome);
 
     printf("Digite o tipo (arma, municao, cura, ferramenta): ");
@@ -37,7 +37,7 @@ void inserirItem(Item mochila[], int *total) {
     mochila[*total] = novo;
     (*total)++;
 
-    printf("\n✅ Item adicionado com sucesso!\n");
+    printf("\n Item adicionado com sucesso!\n");
 }
 
 // -----------------------------------------------------------
@@ -171,7 +171,7 @@ int main() {
                 break;
 
             default:
-                printf("\n⚠️ Opção inválida! Tente novamente.\n");
+                printf("\n Opção inválida! Tente novamente.\n");
         }
 
         } while (opcao != 0);
